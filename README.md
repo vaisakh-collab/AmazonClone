@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+# Amazon Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack Amazon-inspired e-commerce web application built using React, Firebase, Firestore, and Stripe.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User Authentication (Sign Up / Sign In / Sign Out)
+- Product Listing Page
+- Shopping Basket
+- Add and Remove Items from Basket
+- Dynamic Basket Total Calculation
+- Checkout Page
+- Stripe Payment Integration (Test Mode)
+- Order History
+- Firestore Database Storage
+- Responsive Navigation Header
+- Back-to-Top Footer Component
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend
+- React
+- React Router
+- CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### State Management
+- React Context API
+- Reducer Pattern
 
-### `npm test`
+### Backend & Database
+- Firebase Authentication
+- Cloud Firestore
+- Firebase Functions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Payments
+- Stripe API
+- Stripe Elements
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+│
+├── App.js
+├── Header.js
+├── Home.js
+├── Checkout.js
+├── CheckoutProduct.js
+├── Payment.js
+├── Orders.js
+├── Order.js
+├── Login.js
+├── Footer.js
+│
+├── StateProvider.js
+├── reducer.js
+│
+└── firebase.js
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the repository:
 
-### `npm run eject`
+```bash
+git clone <repository-url>
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Navigate into the project directory:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd amazon-clone
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
 
-## Learn More
+Install Firebase Functions dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd functions
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Running Locally
 
-### Code Splitting
+Start the React application:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+Start Firebase Emulators (optional):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+cd functions
+firebase emulators:start
+```
 
-### Making a Progressive Web App
+## Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Create a `.env` file in the project root and add:
 
-### Advanced Configuration
+```env
+REACT_APP_STRIPE_PUBLIC_KEY=your_stripe_public_key
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Store Firebase configuration and Stripe secret keys securely and never commit them to source control.
 
-### Deployment
+## Firebase Services Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Authentication
 
-### `npm run build` fails to minify
+Used for:
+- User registration
+- User login
+- Session management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Firestore
+
+Used for:
+- Storing user orders
+- Retrieving order history
+
+### Cloud Functions
+
+Used for:
+- Creating Stripe Payment Intents
+- Handling secure payment processing
+
+## Learning Outcomes
+
+This project helped me learn:
+
+- React component architecture
+- State management using Context API
+- React Hooks
+- Authentication workflows
+- Firestore database operations
+- REST API integration
+- Payment processing with Stripe
+- Cloud Functions
+- Full-stack application development
+
+## Future Improvements
+
+- Product search functionality
+- Product categories and filters
+- User profiles
+- Wishlist feature
+- Improved responsive design
+- Deployment to Firebase Hosting
+- Admin dashboard
+
+## Disclaimer
+
+This project is built for educational purposes and is not affiliated with Amazon.
