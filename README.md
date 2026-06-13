@@ -14,7 +14,6 @@ A full-stack Amazon-inspired e-commerce web application built using React, Fireb
 - Order History
 - Firestore Database Storage
 - Responsive Navigation Header
-- Back-to-Top Footer Component
 
 ## Tech Stack
 
